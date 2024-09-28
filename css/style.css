@@ -6,43 +6,88 @@ body {
     background-position: center;
   }
   
-  h1{
-    text-align: center;
-  }
-  
-  nav {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    text-align: center;
+  /* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   
-  nav ul{
-    list-style-type: none;
-    background-color: rgb(233, 184, 214);
-    padding: 5px;
-    margin: 5px;
-    display: inline-block;
-    overflow: hidden;
+  body {
+    font-family: 'Times New Roman', sans-serif;
+    background: url('homepage.png') no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   
-  nav a{
-    color: rgb(238, 158, 82);
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+  /* Header and Navigation */
+  .header {
+    background-color: #333;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
     font-weight: bold;
-    margin: 0;
+    color: white;
   }
   
-  nav a:hover{
-    background-color: beige;
+  .nav-links {
+    list-style: none;
+    display: flex;
   }
   
-  nav li{
-    float:left
+  .nav-links li {
+    margin-left: 2rem;
   }
   
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .nav-links a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Main Section */
+  .main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #e0f7fa;
+    padding: 2rem;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #00796b;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  .image-container {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .image-container img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
