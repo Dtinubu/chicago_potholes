@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>PaveGaurd Homepage</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Hompage</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="map.html">Map</a></li>
-        </ul>
-      </nav>
-    </header>
-    <h1>My Home Page</h1>   
-      <h2>My Turtles</h2>
-      <p>A little fun fe bro a backflip.</p>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pothole Detection System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfjA7ozk6D6jwD3GTgksEJfgWDQ8WLSAo&callback=initMap" async defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="header-content">
+                <div class="alert-icon">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Pothole detected on W Lake St</span>
+                </div>
+                <button class="sound-btn">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Map Container -->
+        <div id="map" class="map-container"></div>
+
+        <!-- Bottom Container -->
+        <div class="bottom-container">
+            <button id="report-pothole" onclick="reportPothole()">
+                <i class="fas fa-exclamation-triangle"></i> Click to Report a Pothole
+            </button>
+
+            <!-- Destination and Location -->
+            <div class="location-container">
+                <input type="text" placeholder="What's your destination?" id="destination-input">
+                <div class="recent-locations">
+                    <p>Recent Locations:</p>
+                    <div class="location-option">Home</div>
+                    <div class="location-option">Work</div>
+                </div>
+            </div>
+
+            <div id="user-location">
+                <p>Your Location: <span id="location-coordinates"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
 </html>
